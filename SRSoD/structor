@@ -1,0 +1,33 @@
+scooter_repair_service/
+├── app/
+│   ├── __init__.py           # Đánh dấu thư mục này là một package Python
+│   ├── main.py               # Điểm khởi đầu của ứng dụng
+│   ├── config.py             # Cấu hình ứng dụng (e.g., database, API keys)
+│   ├── routers/              # Chứa các endpoint
+│   │   ├── __init__.py
+│   │   ├── scooters.py       # Endpoint cho quản lý scooter
+│   │   ├── users.py          # Endpoint cho người dùng (khách hàng/thợ sửa)
+│   │   ├── repairs.py        # Endpoint cho quản lý yêu cầu sửa chữa
+│   │   ├── payments.py       # Endpoint liên quan đến thanh toán
+│   └── models/               # Chứa các mô hình dữ liệu
+│       ├── __init__.py
+│       ├── user.py           # Mô hình người dùng
+│       ├── scooter.py        # Mô hình scooter
+│       ├── repair_request.py # Mô hình yêu cầu sửa chữa
+│   └── services/             # Xử lý logic nghiệp vụ (business logic)
+│       ├── __init__.py
+│       ├── auth.py           # Xác thực và phân quyền
+│       ├── notifications.py  # Xử lý thông báo (email/SMS)
+│   └── utils/                # Các hàm tiện ích chung
+│       ├── __init__.py
+│       ├── validators.py     # Hàm validate dữ liệu
+│       ├── helpers.py        # Các helper function
+│   └── database/             # Quản lý cơ sở dữ liệu
+│       ├── __init__.py
+│       ├── connection.py     # Kết nối cơ sở dữ liệu
+│       ├── migrations/       # Thư mục chứa các file di chuyển DB (Alembic)
+└── tests/                    # Thư mục kiểm thử (unit test/integration test)
+    ├── __init__.py
+    ├── test_users.py         # Test liên quan đến người dùng
+    ├── test_scooters.py      # Test liên quan đến scooter
+    ├── test_repairs.py       # Test liên quan đến sửa chữa
